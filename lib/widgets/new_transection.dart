@@ -8,10 +8,15 @@ import 'package:personal_expenses/widgets/adaptiveButton.dart';
 class NewTranscetion extends StatefulWidget {
   final Function addTx;
 
-  NewTranscetion(this.addTx);
+  NewTranscetion(this.addTx){
+    print('Constructor NewTransection  Widget');
+  }
 
   @override
-  _NewTranscetionState createState() => _NewTranscetionState();
+  _NewTranscetionState createState() {
+    print('Create State NewTransection  Widget');
+    return _NewTranscetionState();
+  }
 }
 
 class _NewTranscetionState extends State<NewTranscetion> {
@@ -20,6 +25,29 @@ class _NewTranscetionState extends State<NewTranscetion> {
   final amountController = TextEditingController();
   DateTime _selectDate;
 
+  _NewTranscetionState()
+  {
+     print('construcote new transection state');
+  }
+
+  @override
+  void initState() {
+    print('initState');
+    super.initState();
+  }
+
+
+  @override
+  void didUpdateWidget(covariant NewTranscetion oldWidget) {
+    print('did update widget');
+    super.didUpdateWidget(oldWidget);
+  }
+
+  @override
+  void dispose() {
+    print('dispose');
+    super.dispose();
+  }
   void submitData() {
     if (amountController.text.isEmpty) {
       return;

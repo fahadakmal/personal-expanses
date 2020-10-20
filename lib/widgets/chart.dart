@@ -20,8 +20,7 @@ class Chart extends StatelessWidget {
           totalSum += recentTransection[i].amount;
         }
       }
-      print(DateFormat.E().format(weekDay));
-      print(totalSum);
+
       return {
         'day': DateFormat.E().format(weekDay).substring(0, 1),
         'amount': totalSum
@@ -37,7 +36,7 @@ class Chart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(groupedTransectionValues);
+
     return Card(
       elevation: 6,
       margin: EdgeInsets.all(20),
@@ -47,9 +46,13 @@ class Chart extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: groupedTransectionValues.map((data) {
             return Flexible(
-              fit:FlexFit.tight,
-              child: ChartBar(data['day'], data['amount'],
-                 maxSpending== 0.0 ? 0.0 : (data['amount'] as double) / maxSpending),
+              fit: FlexFit.tight,
+              child: ChartBar(
+                  data['day'],
+                  data['amount'],
+                  maxSpending == 0.0
+                      ? 0.0
+                      : (data['amount'] as double) / maxSpending),
             );
           }).toList(),
         ),
