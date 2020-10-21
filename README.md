@@ -20,8 +20,8 @@ A few resources to get you started if this is your first Flutter project:
 - [install git on your system]
 - [go to the directory where you want to create this project]
 - [open cmd]
-- [Run the below command]()
-- [git clone https://github.com/fahadakmal/personal-expanses.git]
+- [Run the below command]
+  'git clone https://github.com/fahadakmal/personal-expanses.git'
 - [open project with android studio]
 - [Run an amulator]
 - [Run the below command]
